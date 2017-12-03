@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    var userName = "linzhenhuan";
+
+    function outer(outerArg0) {
+        var outerVar = 1;
+
+        function inner(innerArg0) {
+            var innerVar = 1;
+            alert(this.userName);
+        }
+
+        alert(outerVar);
+        inner(2);
+    }
+
+    outer(1);
+
+
+
+</script>

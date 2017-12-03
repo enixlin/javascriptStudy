@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    /* 变量 对象 数组 */
+
+    // 变量
+
+    /* 例1 主要是学习全局变量和局部变量 */
+    /*     
+    function test1(){
+            // 没有带var前缀的变量是全局变量，所以字的作用域是document
+            // 所以test2()这个函数是可以访问到的
+            word="this is a global variable word";
+        }
+    
+        function test2(){
+            alert(word);
+        }
+    
+        test1();
+        test2(); 
+        
+    */
+
+
+    /*例2 学习变量的定义和使用顺序  */
+    //  这里说明js代码依靠解释执行，在一个函数被调用之前，解释器进行一种中做“标识符解析”的神秘操作。
+    //  在这个过程中，函数内部的局部变量就已经被创建出来了。
+    /* 
+    function test3() {
+        alert(word);  //输出undefined 说明变量可以找到，只是没有赋值
+        var word="这是一个定义在函数内部的变量";
+        alert(word);
+    }
+    test3();
+     
+     */
+
+    /* 例3 对象 */
+    //  第一种对象的写法，初学者的写法
+    /* 
+    var obj=new Object();
+    obj.name="linzhenhuan";
+    obj.age=26;
+    alert(obj.name+"-"+obj.age);
+     */
+
+    //  第二种写法，老手的写法
+    /* 
+    var obj={};
+    obj.name="linzhenhuan";
+    obj.age=26;
+    alert(obj.name+"-"+obj.age);
+     */
+    // 两种写法的不同点是：第二种比较简洁
+    // 两种写法的“效果一样”，但内部细节是不同的。
+
+
+    /* 例4 其他重要的内部对象 */
+    // Number对象
+    //使用toFixed()函数指定小数位数
+    /* 
+    function fixNumber() {
+        alert((10 / 3).toFixed(2));
+    }
+    fixNumber();
+     */
+
+    // String对象
+    /* 
+    function substr(){
+        var poem="床前明月光，疑是地上霜";
+        alert(poem.substr(0,3));
+    }
+    substr();
+     */
+
+     /* 例5 等值判定 */
+    //  主要是要学习关于两个等号和三个等号的异同
+    /* 
+    记住以的咒语：
+    true == 1;  true  !== 1;
+    false== 0;  false !== 0;
+    null == undefined ; null !== undefined;
+    NaN 和谁都不相等，和自己也不等
+     */
+
+     /* 例6 ||运算符 */
+    //  第三行代码会从左到右依次进行测试，找到合法的值就会停止
+    //  使用这一技巧可以用来进行参数过滤操作
+    //  var maxWidth=0;
+    //  var obj={x:0};
+    //  var position=maxWidth||obj.x||NaN||200;
+    //  alert(position);
+
+    /* 例7 ！运算符 */
+    /*
+     var obj={};
+    //var obj=null;
+    alert(!!obj);
+    var a ;
+    alert(!!a); 
+    */
+
+    /* 例8 instanceof 和 typeof 运算符 */
+    /*     
+    Animal=function(age){
+        this.age=age;
+    }
+    var animal=new Animal(26);
+    alert(animal instanceof Animal);
+    alert(animal instanceof Object);
+    alert(typeof animal); //object 
+     */
+    // 原生的typeof只能判别js里面的原生类型，自定义类型没有办法
+
+
+    /* 例9 delete运算符 */
+    /* 
+    var obj={};
+    obj.name="my name is linzhenhuan";
+    alert(obj.name);
+    delete obj.name;
+    alert(obj.name);//undefined
+     */
+    // delete只是“标记为”垃圾，还是要等垃圾回收系统自动加收
+
+   
+
+
+
+
+
+
+</script
+alert(animal instanceof Object);>
