@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="myDiv1">
+        <p>第一句：床前明月光</p>
+        <p>第二句：疑是地上霜</p>
+    </div>
+
+    <div id="myDiv2">
+        <p>第三句：举头望明月</p>
+        <div id="myDiv3">
+            <p>第五句：举头望明月</p>
+            <p>第六句：低头思故乡</p>
+        </div>
+        <p>第四句：低头思故乡</p>
+    </div>
+
+    <input type="button" name="" id="btn_appendChild" value="appendChild" onclick="append()">
+    <input type="button" name="" id="btn_removeChild" value="appendChild" onclick="remove()">
+</body>
+
+</html>
+
+
+<script>
+    /* dom 的增删改查 */
+
+    //原生的js元素增删改查
+
+    // 查找标签
+    // var div=document.getElementById("myDiv");
+    //var p = document.getElementsByTagName("p");
+    // alert(div);
+   // alert(p[3].innerHTML); //第五句
+
+    // 增加标签
+    function append(){
+        var di=document.getElementById("myDiv1");
+        var p=document.createElement("p");
+        p.innerText="插入句：XXXXXXX";
+        p.setAttribute("style","color:red");
+        di.appendChild(p);
+    }
+
+        // 删除标签
+        function remove(){
+   
+        var p_array=document.getElementById("myDiv1").childNodes;
+        if(p_array){
+           var  p=p_array[p_array.length-1];
+            console.log(p);
+            p.parentNode.removeChild(p);
+
+        }
+        
+    }
+
+
+</script>
