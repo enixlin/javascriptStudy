@@ -116,12 +116,22 @@
 			//    	"click":function(){alert("click");}
 			//    	});
     	
-			    	var div1=Ext.dom.Element.get("myDiv1");
+		var div1=Ext.dom.Element.get("myDiv1");
     	var div1=Ext.dom.Element.fly(div1.dom);
     	div1.removeCls("background");
     	div1.addClsOnOver("white");
     
 	console.log(div1.dom);
+	var win =Ext.create("Ext.window.Window",{
+		title:"my window",
+		width:400,
+		height:400,
+		items:[
+			{xtype:"form",width:200,height:200,title:"panel" },
+			]
+	}).show();
+	
+	
     });
 
 </script>
