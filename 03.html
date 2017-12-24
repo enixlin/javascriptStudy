@@ -122,6 +122,16 @@
     	div1.addClsOnOver("white");
     
 	console.log(div1.dom);
+	var win =Ext.create("Ext.window.Window",{
+		title:"my window",
+		width:400,
+		height:400,
+		items:[
+			{xtype:"form",width:200,height:200,title:"panel" },
+			]
+	}).show();
+	
+	
     });
 
 </script>
