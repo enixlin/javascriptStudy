@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="green.css">
+    <title>Document</title>
+
+
+    <style>
+        .div {
+            background: red;
+            width: "100px";
+            height: "50px";
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="添加按键" id="btn_add">
+    <input type="button" value="删除按键" id="btn_delete">
+    <div id="div1" class="div"></div>
+</body>
+
+</html>
+
+<script>
+    var btn_add = document.getElementById("btn_add");
+    btn_add.addEventListener("click", function () {
+        createBtn();
+    });
+
+    var btn_delete = document.getElementById("btn_delete");
+    btn_delete.addEventListener("click", function () {
+        deleteBtn();
+    });
+
+    function createBtn() {
+        let div = document.getElementById("div1");
+        let len=div.childNodes.length;        
+        let btn = document.createElement("input");
+        btn.type = "button";
+        btn.value = "我是添加的按键"+len;
+        btn.addEventListener("click",function(){
+            alert(this.value);
+        });
+        btn.addEventListener("mousemove",function(){
+            alert(this.type);
+        });
+        div.appendChild(btn);
+        console.log("div childNodes lenght is:" + div.childNodes.length);
+    }
+
+
+    function deleteBtn() {
+        let div = document.getElementById("div1");
+        console.log("delete div childNodes lenght is:" + div.childNodes.length);
+        div.className="div_green";
+        // while (div.childNodes.length > 0) {
+        //     let len = div.childNodes.length;
+        //     div.removeChild(div.childNodes[len - 1]);
+        // }
+
+
+    }
+
+
+</script>
